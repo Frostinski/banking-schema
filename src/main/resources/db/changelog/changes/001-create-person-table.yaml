@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-person-table
+      author: antigravity
+      changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: varchar(100)
+              - column:
+                  name: middle_names
+                  type: varchar(100)
+              - column:
+                  name: surname
+                  type: varchar(100)
+              - column:
+                  name: date_of_birth
+                  type: date
+              - column:
+                  name: mobile_phone_number
+                  type: varchar(20)
+              - column:
+                  name: email_address
+                  type: varchar(255)
+              - column:
+                  name: address
+                  type: varchar(500)

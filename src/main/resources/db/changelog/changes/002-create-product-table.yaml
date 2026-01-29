@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-create-product-table
+      author: antigravity
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: product_type
+                  type: varchar(100)
+              - column:
+                  name: interest_rate
+                  type: decimal(10, 4)
+              - column:
+                  name: aer
+                  type: decimal(10, 4)

@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-create-person-account-table
+      author: antigravity
+      changes:
+        - createTable:
+            tableName: person_account
+            columns:
+              - column:
+                  name: person_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_account_person
+                    references: person(id)
+              - column:
+                  name: account_id
+                  type: uuid
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_person_account_account
+                    references: account(id)
+        - addPrimaryKey:
+            tableName: person_account
+            columnNames: person_id, account_id
+            constraintName: pk_person_account

@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: changes/001-create-person-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/002-create-product-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/003-create-account-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/004-create-person-account-table.yaml
+      relativeToChangelogFile: true
